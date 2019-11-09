@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="form-validation.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+
+  <body>
+    <!-- Button registration -->
+
+    <button
+      type="button"
+      class="btn btn-primary hut"
+      data-toggle="modal"
+      data-target="#registration"
+    >
+      Registration
+    </button>
+    <!-- Registration form -->
+    <div
+      class="modal fade"
+      id="registration"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="registrationLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title title" id="registrationLabel">
+              Регистрация
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-group row">
+                <label class="sr-only" for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  placeholder="ФИО*"
+                  required
+                />
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  The name is required!
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="sr-only" for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email (Ваш логин)*"
+                  required
+                />
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  The e-mail is required!
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="sr-only" for="phone">Phone</label>
+                <input
+                  type="number"
+                  name="phone"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Телефон*"
+                  required
+                />
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  The phone is required!
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="country" class="sr-only">Country</label>
+                <input
+                  type="text"
+                  name="country"
+                  class="form-control"
+                  id="country"
+                  placeholder="Страна*"
+                  required
+                />
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  The country is required!
+                </div>
+              </div>
+              <div class="form-group row">
+                <div
+                  class="input-group date"
+                  data-provide="datepicker"
+                  data-date-end-date="+0d"
+                >
+                  <label for="date" class="sr-only">Date</label>
+                  <input
+                    type="text"
+                    name="date"
+                    class="form-control"
+                    id="date"
+                    placeholder="Дата рождения"
+                  />
+                  <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="sr-only">Password</label>
+
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Пароль*"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                />
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Must contain at least one number and one uppercase and
+                  lowercase letter, and at least 8 or more characters!
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="passwordRepeate" class="sr-only">Password</label>
+
+                <input
+                  type="password"
+                  name="passwordRepeate"
+                  class="form-control"
+                  id="passwordRepeate"
+                  placeholder="Повторить пароль*"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                />
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Must contain at least one number and one uppercase and
+                  lowercase letter, and at least 8 or more characters!
+                </div>
+              </div>
+              <div class="form-group row">
+                <button type="submit" class="btn btn-primary">
+                  Зарегистрироваться
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+  </body>
+</html>
